@@ -10,7 +10,7 @@ Uma versão online deste projeto pode ser encontrada em: [clean-cache-control.ve
 
 ### Pré-requisitos:
 
-Você precisa do NodeJS, TypeScript, JestJS e do NPM ou Yarn instalado em seu ambiente de desenvolvimento.
+Você precisa do NodeJS, TypeScript, JestJS, Faker e do NPM ou Yarn instalado em seu ambiente de desenvolvimento.
 
 ### Execução
 
@@ -41,8 +41,9 @@ CLIENT_EMAIL=<Cliente de email>
 
 ### Construído com:
 
-* [JestJS.io](https://jestjs.io/) - Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade.
 * [TypeScript](https://www.typescriptlang.org/) - TypeScript é uma linguagem de código aberto que se baseia em JavaScript, adicionando definições de tipo estático.
+* [JestJS](https://jestjs.io/) - Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade.
+* [Faker](https://faker.readthedocs.io/en/master/) - Faker is a Python package that generates fake data for you.
 
 ## Autor
 
