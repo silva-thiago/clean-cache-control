@@ -1,5 +1,5 @@
 import { CacheStore } from '@/data/protocols/cache'
-import { SavePurchases } from '@/domain/usecases/save-purchases'
+import { SavePurchases } from '@/domain/usecases'
 
 export class LocalSavePurchases implements SavePurchases {
   constructor(
@@ -8,8 +8,7 @@ export class LocalSavePurchases implements SavePurchases {
   ) { }
 
   async save(purchases: Array<SavePurchases.Params>): Promise<void> {
-    this.cacheStore.delete('purchases')
-    this.cacheStore.insert('purchases', {
+    this.cacheStore.replace('purchases', {
       timestamp: this.timestamp,
       value: purchases
     })
