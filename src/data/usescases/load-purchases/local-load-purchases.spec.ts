@@ -1,5 +1,5 @@
 import { LocalLoadPurchases } from '@/data/usescases'
-import { CacheStoreSpy, mockPurchases } from '@/data/tests'
+import { CacheStoreSpy, mockPurchases, getCacheExpirationDate } from '@/data/tests'
 
 type SUTTypes = {
   sut: LocalLoadPurchases
@@ -31,10 +31,9 @@ describe('LocalLoadPurchases', () => {
     expect(purchases).toEqual([])
   })
 
-  test('Should call correct key on load and return a list of purchases if cache is less than 3 days old', async () => {
+  test('Should call correct key on load and return a list of purchases if cache is valid', async () => {
     const currentDate = new Date()
-    const timestamp = new Date(currentDate)
-    timestamp.setDate(timestamp.getDate() - 3)
+    const timestamp = getCacheExpirationDate(currentDate)
     timestamp.setSeconds(timestamp.getSeconds() + 1)
     const { sut, cacheStore } = makeSUT(currentDate)
     cacheStore.fetchResult = {
@@ -47,10 +46,9 @@ describe('LocalLoadPurchases', () => {
     expect(purchases).toEqual(cacheStore.fetchResult.value)
   })
 
-  test('Should return an empty list of purchases if cache is older than 3 days old', async () => {
+  test('Should return an empty list of purchases if cache is expired', async () => {
     const currentDate = new Date()
-    const timestamp = new Date(currentDate)
-    timestamp.setDate(timestamp.getDate() - 3)
+    const timestamp = getCacheExpirationDate(currentDate)
     timestamp.setSeconds(timestamp.getSeconds() - 1)
     const { sut, cacheStore } = makeSUT(currentDate)
     cacheStore.fetchResult = {
@@ -64,10 +62,9 @@ describe('LocalLoadPurchases', () => {
     expect(purchases).toEqual([])
   })
 
-  test('Should return an empty list of purchases if cache is 3 days old', async () => {
+  test('Should return an empty list of purchases if cache is on expiration date', async () => {
     const currentDate = new Date()
-    const timestamp = new Date(currentDate)
-    timestamp.setDate(timestamp.getDate() - 3)
+    const timestamp = getCacheExpirationDate(currentDate)
     const { sut, cacheStore } = makeSUT(currentDate)
     cacheStore.fetchResult = {
       timestamp,
@@ -82,8 +79,7 @@ describe('LocalLoadPurchases', () => {
 
   test('Should return an empty list of purchases if cache is empty', async () => {
     const currentDate = new Date()
-    const timestamp = new Date(currentDate)
-    timestamp.setDate(timestamp.getDate() - 3)
+    const timestamp = getCacheExpirationDate(currentDate)
     timestamp.setSeconds(timestamp.getSeconds() + 1)
     const { sut, cacheStore } = makeSUT(currentDate)
     cacheStore.fetchResult = {
