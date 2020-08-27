@@ -21,4 +21,11 @@ describe('LocalLoadPurchases', () => {
     const { cacheStore } = makeSUT()
     expect(cacheStore.actions).toEqual([])
   })
+
+  test('Should call correct key on load', async () => {
+    const { sut, cacheStore } = makeSUT()
+    await sut.loadAll()
+    expect(cacheStore.actions).toEqual([CacheStoreSpy.Action.fetch])
+    expect(cacheStore.fetchKey).toBe('purchases')
+  })
 })
