@@ -9,7 +9,8 @@
 6. Sistema não retorna nenhum erro 
 
 > ## Exceção: Erro ao apagar dados do cache 
-1. Sistema retorna erro 
+1. Sistema não grava os novos dados no cache 
+2. Sistema retorna erro 
 
 > ## Exceção: Erro ao gravar dados do cache 
 1. Sistema retorna erro 
