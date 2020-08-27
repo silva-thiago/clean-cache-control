@@ -1,14 +1,14 @@
-import { LocalSavePurchases } from '@/data/usescases'
+import { LocalLoadPurchases } from '@/data/usescases'
 import { CacheStoreSpy, mockPurchases } from '@/data/tests'
 
 type SUTTypes = {
-  sut: LocalSavePurchases
+  sut: LocalLoadPurchases
   cacheStore: CacheStoreSpy
 }
 
 const makeSUT = (timestamp = new Date()): SUTTypes => {
   const cacheStore = new CacheStoreSpy()
-  const sut = new LocalSavePurchases(cacheStore, timestamp)
+  const sut = new LocalLoadPurchases(cacheStore, timestamp)
 
   return {
     sut,
