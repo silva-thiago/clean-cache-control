@@ -1,6 +1,6 @@
-# Clean Cache Control
-
 [![HitCount](http://hits.dwyl.com/silva-thiago/clean-cache-control.svg)](http://hits.dwyl.com/silva-thiago/clean-cache-control)
+
+# Clean Cache Control
 
 Uma versão online deste projeto pode ser encontrada em: [clean-cache-control.vercel.app](https://clean-cache-control.vercel.app/)
 
@@ -12,7 +12,7 @@ Uma versão online deste projeto pode ser encontrada em: [clean-cache-control.ve
 
 Você precisa do NodeJS, TypeScript, JestJS, Faker e do NPM ou Yarn instalado em seu ambiente de desenvolvimento.
 
-### Execução
+### Execução:
 
 Usando NPM:
 ```
@@ -51,7 +51,8 @@ CLIENT_EMAIL=<Cliente de email>
 
 ## Licença
 
-Este projeto é licenciado sobre a licença MIT - veja [LICENSE.md](LICENSE) para mais informações.
+Este projeto é licenciado sobre a licença MIT
+> veja [LICENSE.md](LICENSE) para mais informações.
 
 ## Agradecimentos
 
