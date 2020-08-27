@@ -8,8 +8,7 @@
 5. Sistema retorna a lista de compras 
 
 > ## Exceção: Erro ao carregar dados do cache 
-1. Sistema limpa o cache 
-2. Sistema retorna uma lista vazia 
+1. Sistema retorna uma lista vazia 
 
 > ## Exceção: Cache expirado 
 1. Sistema limpa o cache 
