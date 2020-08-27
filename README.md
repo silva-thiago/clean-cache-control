@@ -1,16 +1,16 @@
-# Developer Porfolio
+# Clean Cache Control
 
 [![HitCount](http://hits.dwyl.com/silva-thiago/clean-cache-control.svg)](http://hits.dwyl.com/silva-thiago/clean-cache-control)
 
 Uma versão online deste projeto pode ser encontrada em: [clean-cache-control.vercel.app](https://clean-cache-control.vercel.app/)
 
-![Preview](https://github.com/silva-thiago/clean-cache-control)
+<!-- ![Preview](https://github.com/silva-thiago/clean-cache-control) -->
 
 ## Início
 
 ### Pré-requisitos:
 
-Você precisa do NodeJS, NextJS e do NPM ou Yarn instalado em sua máquina.
+Você precisa do NodeJS, TypeScript, JestJS e do NPM ou Yarn instalado em seu ambiente de desenvolvimento.
 
 ### Execução
 
@@ -41,8 +41,8 @@ CLIENT_EMAIL=<Cliente de email>
 
 ### Construído com:
 
-* [NextJS](https://nextjs.org/) - The React Framework for Production.
-* [Figma](https://figma.com/) - Helps teams create, test, and ship better designs from start to finish.
+* [JestJS.io](https://jestjs.io/) - Jest é um poderoso Framework de Testes em JavaScript com um foco na simplicidade.
+* [TypeScript](https://www.typescriptlang.org/) - TypeScript é uma linguagem de código aberto que se baseia em JavaScript, adicionando definições de tipo estático.
 
 ## Autor
 
